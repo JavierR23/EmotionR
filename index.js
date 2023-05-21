@@ -118,9 +118,9 @@ app.post('/insertar', (req, res)=>{
     
     db.collection('Valores').add({
      
-      est: req.body.temp,
-      frec: req.body.hum,
-      temp: req.body.gas,
+      est: req.body.est,
+      frec: req.body.frec,
+      temp: req.body.temp,
       fecha: new Date().toJSON()
     });
     res.send({
