@@ -1,5 +1,4 @@
 {
-  {
     "name": "iot_express_firestore",
     "version": "0.3.0",
     "description": "IoT Express Firestore Heroku",
@@ -33,6 +32,5 @@
       "express"
     ],
     "license": "MIT"
-  }
 }
 
