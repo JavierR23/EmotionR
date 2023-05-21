@@ -10,8 +10,8 @@ DHT dht(DHTPIN, DHTTYPE, 22);
 
 
 // credenciales de la red a la cual nos conectaremos
-const char* ssid = "red";
-const char* password = "password";
+const char* ssid = "INFINITUM47F8";
+const char* password = "eY7Q8JCpRn";
 //const char* ssid = "Tenda_3DE948";
 //const char* password = "18264838";
 //IPAddress ip(192,168,10,9);     
@@ -48,12 +48,10 @@ void loop() {
  //se agregan valores al documento
 DynamicJsonDocument doc(2048);
 
-  doc["temp"] = dht.readTemperature();
-  doc["hum"] = dht.readHumidity();
-  doc["gas"] =  analogRead(35);
-  doc["ruido"] =  analogRead(34)/100;
-  doc["nombre"] =  "ITSRLL";
-  //doc["fecha"] = rtc.getDate();
+  doc["est"] = dht.readTemperature();
+  doc["frec"] = dht.readHumidity();
+  doc["temp"] =  analogRead(35);
+  doc["fecha"] = rtc.getDate();
 
 // documento serializado
 String json;

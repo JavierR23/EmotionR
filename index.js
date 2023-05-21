@@ -118,19 +118,15 @@ app.post('/insertar', (req, res)=>{
     
     db.collection('Valores').add({
      
-      temp: req.body.temp,
-      hum: req.body.hum,
-      gas: req.body.gas,
-      ruido: req.body.ruido,
-      nombre: req.body.nombre,
+      est: req.body.temp,
+      frec: req.body.hum,
+      temp: req.body.gas,
       fecha: new Date().toJSON()
     });
     res.send({
-      temp: req.body.temp,
-      hum: req.body.hum,
-      gas: req.body.gas,
-      ruido: req.body.ruido,
-      nombre: req.body.nombre,
+      est: req.body.temp,
+      frec: req.body.hum,
+      temp: req.body.gas,
       fecha: new Date(),
       status: 'Valores insertados!'
   })
